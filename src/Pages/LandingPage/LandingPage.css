@@ -1,0 +1,15 @@
+.landingPageContainer {
+    background: url("/landing.jpg") no-repeat bottom;
+    min-height: 100dvh;
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+}
+
+@media screen and (max-width: 990px) {
+
+    .landingPageContainer {
+        background: url("/landingmob.jpg") no-repeat center;
+        background-size: cover;
+    }
+}

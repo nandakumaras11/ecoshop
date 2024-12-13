@@ -1,0 +1,43 @@
+.notificationContainer {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    width: 30%;
+    /* background: white; */
+    background: rgb(18, 45, 24);
+    background: linear-gradient(35deg, rgba(18, 45, 24, 1) 0%, rgba(18, 44, 25, 1) 98%);
+    /* width: 100%; */
+    border: 1px solid #FFFFFF21;
+    color: white;
+    padding: 1.2em 1em;
+    /* border: 1px solid #ffffff29; */
+    margin-top: 1em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* text-transform: uppercase; */
+    font-weight: 400;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    text-align: left;
+    z-index: 10000000;
+    border: 1px solid #ffffff63;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 990px) {
+    .notificationContainer {
+        width: 65% !important;
+    }
+
+}

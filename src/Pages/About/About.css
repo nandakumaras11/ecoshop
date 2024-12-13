@@ -1,0 +1,120 @@
+.about {
+    min-height: 100dvh;
+    background: url("/about_bg.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: flex; */
+
+
+    h1 {
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .aboutContainer {
+        margin-top: 3em;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        /* gap: 20px; */
+        .vision {
+            padding: 2.5em 0em !important;
+        }
+
+        h4 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 12px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        .aboutCardIcon {
+            width: 160px;
+            height: 175px;
+            position: absolute;
+            top: -2em;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+
+        }
+
+        .visionMission,
+        .whatWeDo,
+        .whyWeDo {
+            width: 25%;
+        }
+
+        .visionMission {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h4 {
+                margin-bottom: 1em;
+            }
+
+            h4:nth-child(2) {
+                margin-bottom: 0em;
+                text-transform: uppercase;
+            }
+        }
+
+        .card {
+            backdrop-filter: blur(15px);
+            border: 1px solid whitesmoke;
+            padding: 1.5em;
+            border-radius: 35px;
+            position: relative;
+
+        }
+
+        .whatWeDo,
+        .whyWeDo {
+            h4 {
+                margin-top: 5em;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .about {
+        h1 {
+            padding-top: 1em !important;
+        }
+    }
+
+    .aboutContainer {
+        flex-direction: column;
+
+        .whatWeDo,
+        .visionMission,
+        .whyWeDo {
+            width: 100% !important;
+            margin-bottom: 2em;
+        }
+
+        .visionMission {
+            gap: 1em;
+        }
+
+        .whyWeDo {
+            margin-top: 2em;
+        }
+    }
+}

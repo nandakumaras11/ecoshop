@@ -1,0 +1,111 @@
+.signInContainer {
+    background: url("/loginbg.png") center no-repeat;
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    .left {
+        width: 60%;
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+        padding: 0% 4em;
+
+        h2 {
+            font-size: 2.5em;
+            color: white;
+        }
+    }
+
+    .right {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        padding: 0 5em;
+
+        h2 {
+            font-size: 3em;
+            color: white;
+        }
+
+        p {
+            color: white;
+            font-size: 0.6em;
+            margin-top: 2em;
+            font-weight: 300;
+        }
+
+        .gLoginBtn {
+            margin-top: 5em;
+        }
+
+        .socialMediaBar {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 1em;
+            cursor: pointer;
+
+            .socialMedia {
+                display: block;
+                color: white;
+            }
+        }
+
+        .signInBtn {
+            background: rgb(18, 45, 24);
+            background: linear-gradient(35deg, rgba(18, 45, 24, 1) 0%, rgba(18, 44, 25, 1) 98%);
+            width: 100%;
+            border: 1px solid #FFFFFF21;
+            color: white;
+            padding: 1.2em 0.5em;
+            /* border: 1px solid #ffffff29; */
+            margin-top: 1em;
+            text-align: center;
+            /* text-transform: uppercase; */
+            font-weight: 400;
+            font-size: 0.8em;
+            cursor: pointer;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .signInContainer {
+        flex-direction: column-reverse;
+
+        .left,
+        .right {
+            width: 100% !important;
+        }
+
+        .left {
+            h2 {
+                padding: 2em 0em;
+                font-size: 2em;
+                text-align: center;
+            }
+        }
+
+        .right {
+            padding: 0 2em;
+
+            h2 {
+                text-align: center;
+            }
+
+            .gLoginBtn {
+                margin-top: 2em !important;
+            }
+
+
+        }
+
+    }
+
+}

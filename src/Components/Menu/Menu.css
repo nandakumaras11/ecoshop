@@ -1,0 +1,90 @@
+nav {
+    position: fixed;
+    bottom: 28%;
+
+    /* left: 0px; */
+    /* right: 0; */
+    color: black;
+    z-index: 10;
+    /* background-color: rgba(0, 71, 0, 0.914); */
+    border-radius: 0em 1em 1em 0em;
+
+    .menuItem {
+        display: flex;
+        transition: all 1s ease;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0.5em;
+        cursor: pointer;
+        /* margin-bottom: 1em; */
+
+        /* gap: 20px; */
+        .icon {
+            font-size: 1.2em;
+        }
+
+        .name {
+            font-size: 0.7em;
+        }
+    }
+}
+
+.menuControls {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 10000;
+    cursor: pointer;
+    /* min-width: 200px; */
+}
+
+
+@media screen and (max-width: 990px) {
+    .logo {
+        img {
+            width: 70px;
+        }
+    }
+
+
+    .visible {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        color: white;
+    }
+
+    .hidden {
+        left: -100em;
+        right: auto;
+    }
+
+    nav {
+        transition: all 1s ease;
+        top: 0;
+        right: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menuControls {
+        display: block;
+        color: white;
+        z-index: 10000;
+        position: fixed;
+        top: 2em;
+        right: 2em;
+        font-weight: 700
+    }
+}

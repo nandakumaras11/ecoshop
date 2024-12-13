@@ -1,0 +1,154 @@
+.enquiryContainer {
+    background: rgb(17, 60, 22);
+    background: linear-gradient(90deg, rgba(17, 60, 22, 1) 0%, rgba(18, 32, 26, 1) 100%);
+    min-height: 100dvh;
+    color: white;
+
+    .leftBg,
+    .rightBg {
+        position: absolute;
+        /* rotate: -60deg; */
+    }
+
+    .leftBg {
+        left: 0em;
+        top: 0;
+    }
+
+    .rightBg {
+        right: 0;
+        bottom: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
+    .productDetails {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        margin-top: 2em;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .left {
+            border: 1px solid #ffffff29;
+            backdrop-filter: blur(15px);
+            /* border: 1px solid whitesmoke; */
+            background: #ffffff07;
+            padding: 1.5em;
+            border-radius: 35px;
+            width: 30%;
+            position: relative;
+            display: flex;
+            font-weight: 200;
+
+            div {
+                margin-bottom: 0.5em;
+            }
+
+            span {
+                font-size: 0.9em;
+            }
+
+            .pdetails {
+                align-self: flex-end;
+                padding-bottom: 1em;
+
+                .Material,
+                .minOrderQuantity {
+                    font-size: 0.8em;
+                }
+            }
+
+            b {
+                font-weight: 500;
+            }
+
+            .pImage {
+                position: absolute;
+                top: -2em;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto
+            }
+        }
+
+
+        .right {
+            width: 60%;
+        }
+
+        .pname {
+            font-size: 1.3em;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        .requirementInput {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #ffffff29;
+            border-radius: 6px;
+            padding: 0.9em 0em 0.9em 0.5em;
+            font-family: inherit;
+            color: white;
+        }
+
+        .enquiryBtn {
+            width: 100%;
+            padding: 1em 0.5em;
+            border: 1px solid #ffffff29;
+            margin-top: 1em;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8em;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 990px) {
+    .enquiryContainer {
+        .productDetails {
+            flex-direction: column;
+
+            .left,
+            .right {
+                width: 100% !important;
+            }
+
+            .pImage {
+                margin-right: 0px !important;
+            }
+
+            .right {
+                .row {
+                    flex-direction: column !important;
+                }
+            }
+        }
+    }
+}
