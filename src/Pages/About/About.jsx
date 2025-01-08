@@ -8,7 +8,7 @@ const About = () => {
                 <div className="whatWeDo card">
                     <img src="/whatwedo.png" className="aboutCardIcon" alt="" />
                     <h4>What We Do</h4>
-                    <p>To inspire you to live life to the full, promoting a healthy lifestyle, encouraging our customers to enjoy the beautiful world around us and letting you rest easy knowing you’ve made the positive choices for people and the planet</p>
+                    <p>We inspire you to live fully by promoting a healthy, eco-friendly lifestyle. We offer sustainable products from around the world, helping you make positive choices for people and the planet. Our goal is to connect people globally for a better, more sustainable future.</p>
                 </div>
                 <div className="visionMission">
                     <div className="mission card">

@@ -1,8 +1,28 @@
+.pdetails::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.pdetails::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+.pdetails::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(187, 254, 204, 0.459);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 .enquiryContainer {
     background: rgb(17, 60, 22);
     background: linear-gradient(90deg, rgba(17, 60, 22, 1) 0%, rgba(18, 32, 26, 1) 100%);
     min-height: 100dvh;
     color: white;
+    position: relative;
 
     .leftBg,
     .rightBg {
@@ -64,9 +84,13 @@
                 font-size: 0.9em;
             }
 
+
+
             .pdetails {
                 align-self: flex-end;
                 padding-bottom: 1em;
+                max-height: 33dvh;
+                overflow-y: auto;
 
                 .Material,
                 .minOrderQuantity {

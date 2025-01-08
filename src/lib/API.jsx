@@ -8,7 +8,7 @@ export const httpRequest = (method = 'get', url, data = null, headers = commonHe
     return new Promise((resolve, reject) => {
         let options = {
             method: method,
-            url: url == "allpost" || 'post/blog-title' ? `https://crm.makingworldawesome.com/api/${url}` : import.meta.env.VITE_APIENDPOINT + url,
+            url: (url == "posts" || url.substring("posts")) ? `https://crm.makingworldawesome.com/api/${url}` : import.meta.env.VITE_APIENDPOINT + url,
             headers: { ...commonHeaders, ...headers }
         }
         if (method == "post")

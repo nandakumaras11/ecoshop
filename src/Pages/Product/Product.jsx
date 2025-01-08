@@ -17,6 +17,8 @@ const Product = WithGuestMenu(() => {
 
     return (
         <section className="products">
+            <img src="/leaft.png" alt="" className="leftBg" />
+            <img src="/leaft.png" alt="" className="rightBg" />
             <h2>Products</h2>
             <div className="productContainer">
                 {products && products.map((product => <ProductCards productDetails={product} />))}

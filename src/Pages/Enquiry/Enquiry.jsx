@@ -7,9 +7,9 @@ import { useState } from "react";
 import Notification from "../../Components/Notofication/Notification";
 import { BackButton } from "../Supplier/SupplierDashBoardTemplate";
 const Enquiry = WithGuestMenu(() => {
-    const { state: { id, product_name, material, product_details, min_order_quantity } } = useLocation();
+    const { state: { id, product_name, material, product_details, min_order_quantity, image } } = useLocation();
     const [notificationMessage, setNotificationMessage] = useState(null);
-    // console.log(id);
+    console.log(product_details);
 
     const enquiryInitialState = {
         "name": "",
@@ -66,9 +66,9 @@ const Enquiry = WithGuestMenu(() => {
                 <h2>PRODUCT</h2>
                 <div className="productDetails">
                     <div className="left">
-                        <img src="/productsample.png" className="pImage" alt="" />
+                        <img src={`https://eco.makingworldawesome.com/${image}`} height="220" className="pImage" alt="" />
                         <div className="pdetails">  <div className="pname">{product_name}</div>
-                            <div className="Material"><b>Material:</b> <span></span>:{material} </div>
+                            <div className="Material"><b>Material</b> : {material} </div>
                             <div className="minOrderQuantity"><b>Minimum order quantity :</b> <span>{min_order_quantity}</span></div>
                             <span><p>{product_details}</p>
                             </span>

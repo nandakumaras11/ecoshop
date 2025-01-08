@@ -9,10 +9,10 @@ export const Blog = WithGuestMenu(() => {
 
     let [blogs, setBlogs] = useState(null)
     useEffect(() => {
-        httpRequest("get", "allpost").then(({ posts }) => {
-            console.log(posts);
+        httpRequest("get", "posts").then(({ data }) => {
+            // console.log(data);
 
-            setBlogs(posts);
+            setBlogs(data && data.data);
         })
 
     }, [])
@@ -31,7 +31,7 @@ export const Blog = WithGuestMenu(() => {
 
 // export const Blog 
 
-const BlogCard = ({ blog: { slug, title, image, content } }) => {
+const BlogCard = ({ blog: { id, slug, title, image, content } }) => {
     const navigate = useNavigate();
     return (
         <>
@@ -40,7 +40,7 @@ const BlogCard = ({ blog: { slug, title, image, content } }) => {
                 <img src={image} className="blogImg" alt="" />
                 <div className="textArea">
                     <h3 className="blogName">{title}</h3>
-                    <p className="description">{parse(content.slice(0, 150))}</p>
+                    {content && <p className="description">{parse(content.slice(0, 150))}</p>}
                 </div>
             </div>
         </>

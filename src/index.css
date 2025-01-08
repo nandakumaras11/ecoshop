@@ -19,7 +19,7 @@ body {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
   position: relative;
-  max-width: 1700px;
+  /* max-width: 1700px; */
   margin: 0 auto;
   /* background-color: antiquewhite; */
 }
